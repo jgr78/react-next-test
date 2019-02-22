@@ -1,0 +1,28 @@
+{
+  "name": "spicypixels",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "NODE_ENV=dev node server.js",
+    "prod:build": "NODE_ENV=production npm run build",
+    "export": "npm run build && next export",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "@zeit/next-sass": "^1.0.1",
+    "express": "^4.16.4",
+    "next": "^7.0.2",
+    "next-page-transitions": "^1.0.0-alpha.5",
+    "node-sass": "^4.11.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {}
+}

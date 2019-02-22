@@ -1,0 +1,73 @@
+export const data_projects = [
+   {  
+      id : "one",
+      client: "One",
+      title : "One title",
+      img_project: "/static/img/projects/project/project_1.jpg",
+      img_logo: "/static/img/projects/mini/mini_1.jpg",
+   },
+   {  
+      id : "two",
+      client: "Two",
+      title : "Two title",
+      img_project: "/static/img/projects/project/project_1.jpg",
+      img_logo: "/static/img/projects/mini/mini_1.jpg",
+   },
+   {  
+      id : "three",
+      client: "Three",
+      title : "Three title",
+      img_project: "/static/img/projects/project/project_1.jpg",
+      img_logo: "/static/img/projects/mini/mini_1.jpg",
+   },
+   {  
+      id : "four",
+      client: "Four",
+      title : "Four title",
+      img_project: "/static/img/projects/project/project_1.jpg",
+      img_logo: "/static/img/projects/mini/mini_1.jpg",
+   },
+   {  
+      id : "five",
+      client: "Five",
+      title : "Five title",
+      img_project: "/static/img/projects/project/project_1.jpg",
+      img_logo: "/static/img/projects/mini/mini_1.jpg",
+   },
+   {  
+      id : "six",
+      client: "Six",
+      title : "Six title",
+      img_project: "/static/img/projects/project/project_1.jpg",
+      img_logo: "/static/img/projects/mini/mini_1.jpg",
+   },
+   {  
+      id : "seven",
+      client: "Seven",
+      title : "Seven title",
+      img_project: "/static/img/projects/project/project_1.jpg",
+      img_logo: "/static/img/projects/mini/mini_1.jpg",
+   },
+   {  
+      id : "eight",
+      client: "Eight",
+      title : "Eight title",
+      img_project: "/static/img/projects/project/project_1.jpg",
+      img_logo: "/static/img/projects/mini/mini_1.jpg",
+   },
+   {  
+      id : "nine",
+      client: "Nine",
+      title : "Nine title",
+      img_project: "/static/img/projects/project/project_1.jpg",
+      img_logo: "/static/img/projects/mini/mini_1.jpg",
+   },
+   {  
+      id : "ten",
+      client: "Ten",
+      title : "Ten title",
+      img_project: "/static/img/projects/project/project_1.jpg",
+      img_logo: "/static/img/projects/mini/mini_1.jpg",
+   },
+];
+

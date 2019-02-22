@@ -1,0 +1,90 @@
+/*!
+ * cross animation
+ */
+ .cross {
+    padding: 6px 9px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+
+    border: 0.2em solid #222;
+    border-radius: 50%;
+
+    overflow: visible; }
+    .cross:hover {
+      opacity: 0.7; }
+    .cross.is-active:hover {
+      opacity: 0.7; }
+    .cross.is-active .cross-inner,
+    .cross.is-active .cross-inner::before,
+    .cross.is-active .cross-inner::after {
+      background-color: #222; }
+  
+  .cross-box {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    position: relative; }
+  
+  .cross-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px; 
+    margin-left: -5px;
+  }
+    .cross-inner, .cross-inner::before, .cross-inner::after {
+      width: 20px;
+      height: 4px;
+      background-color: #222;
+      border-radius: 4px;
+      position: absolute;
+      transition-property: transform;
+      transition-duration: 0.15s;
+      transition-timing-function: ease; }
+    .cross-inner::before, .cross-inner::after {
+      content: "";
+      display: block; }
+    .cross-inner::before {
+      /*top: -10px;*/ }
+    .cross-inner::after {
+      /*bottom: -10px;*/
+      transform: rotate(-90deg); }
+  
+  /*
+   * Spin
+   */
+  .cross--spin .cross-inner {
+    transition-duration: 0.22s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+    .cross--spin .cross-inner::before {
+      transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    .cross--spin .cross-inner::after {
+      transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  
+  .cross--spin.is-active .cross-inner {
+    transform: rotate(225deg);
+    transition-delay: 0.12s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); 
+
+  }
+    .cross--spin.is-active .cross-inner::before {
+      top: 0;
+      opacity: 0;
+      transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; 
+
+    }
+    .cross--spin.is-active .cross-inner::after {
+      bottom: 0;
+      transform: rotate(-90deg);
+      transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    
+    }
+  

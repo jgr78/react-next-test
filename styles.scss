@@ -1,0 +1,529 @@
+/* -----------------------------------------------------------*/
+/*  IMPORT                                                    */
+/* -----------------------------------------------------------*/
+@import 'scss/reset.scss';
+@import 'scss/hamburgers'; 
+@import 'scss/cross'; 
+
+/* -----------------------------------------------------------*/
+/*  VARIABLES                                                 */
+/* -----------------------------------------------------------*/
+$black-color: #000;
+$white-color: #FFF;
+$gray-color: #7a7a7a;
+
+$font-family: Arial, Helvetica, sans-serif;
+
+/* -----------------------------------------------------------*/
+/*  FONTS                                                     */
+/* -----------------------------------------------------------*/
+
+h3, h2, h1, a {
+  font-family: $font-family;
+  font-weight:normal;
+  font-style:normal;
+}
+
+/* -----------------------------------------------------------*/
+/*  HEADER                                                    */
+/* -----------------------------------------------------------*/
+
+/* Style the header: fixed position (always stay at the top) */
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    transform: translate3d(0,0,0);
+    transition: transform .8s cubic-bezier(.9,0,.1,1);
+    height: 5px;
+    z-index: 100;
+  }
+  
+  /* The progress container (grey background) */
+  .progress-container {
+    width: 100%;
+    height: 8px;
+  }
+  
+  /* The progress bar (scroll indicator) */
+  div .progress-bar-bottom {
+    height: 5px;
+    background: transparent;
+    width: 100%;
+    clip-path: inset(0 0 0 0);
+    -webkit-clip-path: inset(0 0 0 0);
+    position: absolute;
+    z-index: 0;
+  }
+
+  div .progress-bar-top {
+    height: 5px;
+    background: $black-color;
+    width: 100%;
+    position: absolute;
+    clip-path: inset(0 100% 0 0);
+    -webkit-clip-path: inset(0 100% 0 0);
+    z-index: 101;
+  }
+
+/* -----------------------------------------------------------*/
+/*  SECTION GLOBAL                                            */
+/* -----------------------------------------------------------*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}
+
+.full_width{
+  width: 100%;
+}
+
+.full_height{
+  height: 100vh;
+}
+
+button {
+  outline: none;
+}
+
+.clean{
+  clear: both;
+}
+
+/* -----------------------------------------------------------*/
+/*  SECTION 1 BURGER                                          */
+/* -----------------------------------------------------------*/
+
+#section_burger {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  text-align: right;
+  z-index: 20;
+}
+
+#burger_block {
+  width: fit-content;
+  position: relative;
+  float: right;
+  top: 20px;
+  right: 20px;
+}
+
+#burguer_img {
+  width: 90px;
+  transition: all 1.2s cubic-bezier(0.4, 0.62, 0, 1);
+}
+#burger_img, .hamburger-box {
+  transition: all 1.2s cubic-bezier(0.4, 0.62, 0, 1);
+}
+
+#burger_block #burguer_img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+#burger_block .hamburger {
+  position: absolute;
+  top: 11px;
+  right: 9px;
+}
+
+/* -----------------------------------------------------------*/
+/*  SECTION 2 LOGO                                            */
+/* -----------------------------------------------------------*/
+
+.container_section{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+#img_logo {
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    top: 20%;
+    width: 30%;
+    min-width: 240px;
+}
+
+.flexbox-container {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* -----------------------------------------------------------*/
+/*  OVERLAY                                                   */
+/* -----------------------------------------------------------*/
+
+#overlay_layer {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $gray-color;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.overlay-animate {
+  display: block !important;
+}
+
+.overlay-animate-reverse  {
+  display: none;
+}
+
+/* -----------------------------------------------------------*/
+/*  MENU                                                      */
+/* -----------------------------------------------------------*/
+
+#menu_options {
+  color: $white-color;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  #menu_list {
+    font-size: 60px;
+    line-height: 75px;
+    font: 80px/100px ZonaPro-Black;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    .menu_item a{
+      text-decoration: none;
+      color: $white-color;
+    }
+  }
+}
+
+/* -----------------------------------------------------------*/
+/*  ABOUT US                                                  */
+/* -----------------------------------------------------------*/
+
+#section_aboutus {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.text_block {
+  position: relative;
+  width: 50%;
+  min-width: 350px;
+  max-width: 800px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 0 auto;
+}
+.text_title_big{
+  font-family: $font-family;
+  font-size: 3em;
+}
+.text_paragraph {
+  font-family:  $font-family;
+  font-size: 1.5em;
+  text-align: justify;
+}
+
+/* -----------------------------------------------------------*/
+/*  CLIENTS                                                   */
+/* -----------------------------------------------------------*/
+.section {
+  width:100%;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+.section_container{
+  padding-left: 60px;
+  padding-right: 60px;
+  transition: all 1.2s cubic-bezier(0.4, 0.62, 0, 1);
+}
+
+.title_inverse_color {
+  color: $white-color;
+}
+.title_block{
+  width: fit-content;
+  margin-bottom: 40px;
+}
+.title_text{
+  font-size: 2.5em;
+  font-weight: bold;
+  padding-left: 2px;
+  padding-right: 5px;
+}
+.title_underline{
+  height: 5px;
+  background-color: $black-color;
+  border-right: 10px solid $gray-color;
+}
+.title_inverse_underline{
+  height: 5px;
+  background-color: $gray-color;
+  border-right: 10px solid $white-color;
+}
+
+.client_img{
+    width: 140px;
+    transition: all 1.2s cubic-bezier(0.4, 0.62, 0, 1);
+}
+
+.clients_table{
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1100px;
+  width: 100%;
+}
+button {
+  outline: none;
+}
+
+/* -----------------------------------------------------------*/
+/*  PROJECTS                                                  */
+/* -----------------------------------------------------------*/
+
+.project_background {
+  transition: all 0.8s cubic-bezier(0.4, 0.62, 0, 1);
+}
+
+
+.project__general .project__background2{
+  position: absolute;
+  width: 540px;
+  top: 80px;
+  right: 30px;
+  height: auto;
+  z-index: 2;
+}
+.project__general .project__logo2{
+  position: absolute;
+  width: 200px;
+  top: 320px;
+  right: 430px;
+  height: auto;
+  z-index: 3;
+}
+.project_text2{
+  position: absolute;
+  top: 420px;
+  right: 130px;
+  z-index: 4;
+}
+
+
+
+  .project_text{
+      position: absolute;
+      top: 380px;
+      left: 120px;
+      z-index: 4;
+
+      top: 420px;
+      left: 130px;
+
+  }
+  .project_general .project_text,
+  .project_text_small, .project_text_big {
+      font-family: $font-family;
+      font-size: 2.5em;
+  }
+  .project_text_small {
+      display: inline-block;
+  }
+  .project_text_small {
+    font-size: 2.2em;
+  }
+  .project_text_big {
+      font-size: 2.2em;
+  }
+  .color_square {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+      display: inline-block;
+  }
+  .color_square_blue {
+      background-color: $black-color;
+  }
+  .color_square_dark_orange {
+    background-color: $black-color;
+}
+
+  .project__general {
+     position: relative;
+     display: block;
+     min-height: 630px;
+     margin-bottom: 50px;
+  }
+  .project__general .project__details-bg{
+      position: absolute;
+      width: 430px;
+      width: 500px;
+      top: 0px;
+      left: 0px;
+      height: auto;
+      z-index: 1;
+  }
+  .project__general .project__background {
+      position: absolute;
+      width: 470px;
+      width: 540px;
+      top: 80px;
+      left: 30px;
+      height: auto;
+      z-index: 2;
+  }
+  .project__general .project__logo{
+      position: absolute;
+      width: 180px;
+      width: 200px;
+      top: 280px;
+      left: 370px;
+      top: 320px;
+      left: 430px;
+      height: auto;
+      z-index: 3;
+  }
+  .project__general .block_shadow {
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, .5);
+  }
+
+/* -----------------------------------------------------------*/
+/*  FOOTER                                                    */
+/* -----------------------------------------------------------*/
+
+  #section_footer{
+    #footer_down {
+      background-color: black;
+      height: 500px;
+    }
+  }
+
+/* -----------------------------------------------------------*/
+/*  ALL Projects                                              */
+/* -----------------------------------------------------------*/
+
+#all_projects{
+  margin-bottom: 100px;
+  .all_projects_top {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    .allprojects_title_block {
+      cursor: pointer;
+      width: fit-content;
+      margin: 0 0 0 auto;
+      padding-right: 100px;
+      .cross {
+        transform: scale(0.9);
+        vertical-align: middle;
+      }
+      .allprojects_title_text {
+        vertical-align: middle;
+        display: inline-block;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding-left: 2px;
+        padding-right: 5px;
+        font-family: $font-family;
+        font-weight:normal;
+        font-style:normal;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: black;
+      }
+    }
+  }
+  .all_projects_bottom {
+    width: 100%;
+    margin-top: 30px;
+    display:none;
+    opacity:0;
+    transition:all 1s linear;
+    -webkit-clip-path: inset(0 0 100% 0);
+    clip-path: inset(0 0 100% 0);
+    .projects_img_link {
+      float:left;
+      max-width: 250px;
+      width: 18vw;
+      min-width: 150px;
+      padding-left: 1px;
+      padding-bottom: 1px;
+      cursor: pointer;
+    }
+  }
+}
+
+.slideIn {
+  animation: square-toggle 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  display:block !important;
+  opacity:1 !important;
+}
+.slideOut {
+  animation: square-toggle-reverse 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-direction: forwards;
+  opacity:0;
+}
+
+@keyframes square-toggle {
+  from {    
+    -webkit-clip-path: inset(0 0 100% 0);
+    clip-path: inset(0 0 100% 0);
+  }
+  to {    
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes square-toggle-reverse {
+  from {    
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+  }
+  to {    
+    -webkit-clip-path: inset(0 0 100% 0);
+    clip-path: inset(0 0 100% 0);
+  }
+}
+
+/* -----------------------------------------------------------*/
+/*  PROJECT PAGE                                               */
+/* -----------------------------------------------------------*/
+
+#section_individual {
+  #individual_project {
+    text-align: center;
+    .individual_image {
+         width: 100%;
+         max-width: 1000px;
+    }
+  }
+}
+/* -----------------------------------------------------------*/
+/*  MEDIA IMPORT                                              */
+/* -----------------------------------------------------------*/
+
+@import 'scss/media720.scss';
+@import 'scss/media460.scss';

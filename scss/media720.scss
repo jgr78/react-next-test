@@ -1,0 +1,87 @@
+
+@media screen and (max-width: 720px) {
+    #burguer_img, .hamburger-box {
+        transform: scale(0.8) translate(20px,-20px);
+    }
+    .section_container{
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 100%;
+    }
+
+    .title_block {
+        padding-left: 30px;
+    }
+
+    /* -----------------------------------------------------------*/
+    /*  PROJECTS                                                  */
+    /* -----------------------------------------------------------*/
+
+    .project__details {
+        -webkit-transition: all 3s linear;
+        -ms-transition: all 3s linear;
+        transition: all 3s linear;
+
+        animation: remove-background-animation 3s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    .project__general {
+        background-color: transparent !important;
+        min-height: 600px !important;
+    }
+    .project__background,
+    .project__background2  {
+        width: 100% !important;
+        top:0px !important;
+        left:0px !important;
+        position: inherit !important;
+
+        transition: all 0.8s cubic-bezier(0.4, 0.62, 0, 1);
+    }
+    .project__logo,
+    .project__logo2{
+        position: relative !important;
+        top: -40px !important;
+        right: 0px !important;
+        float: right;
+        left: auto !important;
+    }
+    .project_text,
+    .project_text2{
+        position: relative !important;
+        top: 0px !important;
+        left: 0px !important;
+        width: fit-content !important;
+        float: left;
+        left: auto !important;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    .project_text2{
+        top: 420px;
+        right: auto;
+        left: 130px;
+    }
+    .project_text_big {
+        font-size: 1.6em ;
+    }
+    .project_text_small {
+        font-size: 1.6em ;
+    }
+}
+
+
+@keyframes remove-background-animation{
+    from {    
+      -webkit-clip-path: circle(200.0% at 95% 56px);
+      clip-path: circle(200.0% at 95% 56px);
+    }
+    to {    
+      -webkit-clip-path: circle(0.0% at 95% 56px);
+      clip-path: circle(0.0% at 95% 56px);
+    }
+  }
+  
